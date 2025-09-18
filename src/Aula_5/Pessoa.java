@@ -3,7 +3,7 @@ package Aula_5;
 public class Pessoa {
     private String nome;
     private int idade;
-    private String livro;
+    private Livro livro;
     private int diasDevolucao;
     
     public Pessoa() {
@@ -16,7 +16,7 @@ public class Pessoa {
         this.idade = idade;
     }
     
-    public Pessoa(String nome, int idade, String livro, int diasDevolucao) {
+    public Pessoa(String nome, int idade, Livro livro, int diasDevolucao) {
         this(nome, idade);
         this.livro = livro;
         this.diasDevolucao = diasDevolucao;
@@ -27,16 +27,16 @@ public class Pessoa {
             return "***";
         }
         else {
-            return livro;
+            return livro.getNome();
         }
     }
     
-    public void emprestar(String livro) {
+    public void emprestar(Livro livro) {
         this.livro = livro;
         this.diasDevolucao = 20;
     }
     
-    public void emprestar(String livro, int dias) {
+    public void emprestar(Livro livro, int dias) {
         this.livro = livro;
         this.diasDevolucao = dias;
     }
@@ -45,7 +45,7 @@ public class Pessoa {
         String msg = "\n==================="
                     +"\nNome: "+nome
                     +"\nIdade: "+idade
-                    +"\nLivro: "+getLivro()
+                    +"\nLivro: "+livro.imprimir()
                     +"\nDias Devolucao: "+diasDevolucao
                     +"\n===================";
         System.out.println(msg);
