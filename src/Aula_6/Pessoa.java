@@ -5,7 +5,7 @@ import Aula_5.*;
 public class Pessoa {
     private String nome;
     private int idade;
-    private Livro livro;
+    private String livro;
     private int diasDevolucao;
     
     public Pessoa() {
@@ -18,7 +18,7 @@ public class Pessoa {
         this.idade = idade;
     }
     
-    public Pessoa(String nome, int idade, Livro livro, int diasDevolucao) {
+    public Pessoa(String nome, int idade, String livro, int diasDevolucao) {
         this(nome, idade);
         this.livro = livro;
         this.diasDevolucao = diasDevolucao;
@@ -29,16 +29,16 @@ public class Pessoa {
             return "***";
         }
         else {
-            return livro.getNome();
+            return livro;
         }
     }
     
-    public void emprestar(Livro livro) {
+    public void emprestar(String livro) {
         this.livro = livro;
         this.diasDevolucao = 20;
     }
     
-    public void emprestar(Livro livro, int dias) {
+    public void emprestar(String livro, int dias) {
         this.livro = livro;
         this.diasDevolucao = dias;
     }
@@ -47,7 +47,7 @@ public class Pessoa {
         String msg = "\n==================="
                     +"\nNome: "+nome
                     +"\nIdade: "+idade
-                    +"\nLivro: "+livro.imprimir()
+                    +"\nLivro: "+livro
                     +"\nDias Devolucao: "+diasDevolucao
                     +"\n===================";
         System.out.println(msg);
