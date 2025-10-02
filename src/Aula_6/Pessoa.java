@@ -33,6 +33,10 @@ public class Pessoa {
         }
     }
     
+    public String getNome() {
+        return nome;
+    }
+    
     public void emprestar(String livro) {
         this.livro = livro;
         this.diasDevolucao = 20;
