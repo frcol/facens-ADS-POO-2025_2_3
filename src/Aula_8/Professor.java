@@ -47,4 +47,8 @@ public class Professor extends Pessoa {
         
         return msg;
     }
+    
+    public void andar() {
+        System.out.println("Andando...");
+    }
 }

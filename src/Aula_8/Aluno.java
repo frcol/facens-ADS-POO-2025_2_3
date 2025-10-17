@@ -52,4 +52,8 @@ public class Aluno extends Pessoa {
         
         return msg;
     }
+    
+    public void andar() {
+        System.out.println("Correndo...");
+    }
 }

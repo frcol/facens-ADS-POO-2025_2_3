@@ -19,18 +19,18 @@ public class Main {
         lstPessoas.add(a1);
         lstPessoas.add(prof1);
         
-        /*for (Pessoa p : lstPessoas) {
-            System.out.println(p.imprimir());
-        }*/
+        for (Pessoa p : lstPessoas) {
+            p.andar();
+        }
         
         //CAST
         ((Aluno)lstPessoas.get(0)).getRa();     // aluno
         
         // filtrar a lista por Aluno
-        for (Pessoa p : lstPessoas) {
+        /*for (Pessoa p : lstPessoas) {
             if (p instanceof Aluno) {
                 ((Aluno) p).getRa();
             } 
-        }
+        }*/
     }
 }
