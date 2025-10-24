@@ -48,6 +48,7 @@ public class Professor extends Pessoa {
         return msg;
     }
     
+    @Override
     public void andar() {
         System.out.println("Andando...");
     }
